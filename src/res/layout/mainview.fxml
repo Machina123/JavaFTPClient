@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.machina.ftp.controllers.MainController">
+   <center>
+      <TableView fx:id="tableFiles" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <VBox maxWidth="200.0" prefWidth="200.0" spacing="8.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnNewDir" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleNewDir" text="Nowy katalog" />
+            <Button fx:id="btnUploadFile" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleUploadFile" text="Prześlij plik" />
+            <Button fx:id="btnUploadDir" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleUploadDir" text="Prześlij katalog" />
+            <Button fx:id="btnDownload" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDownload" text="Pobierz" />
+            <Button fx:id="btnRename" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleRename" text="Zmień nazwę / Przenieś" />
+            <Button fx:id="btnRemove" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleRemove" text="Usuń" />
+            <Button fx:id="btnLogout" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLogout" text="Wyloguj" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </VBox>
+   </right>
+   <top>
+      <HBox maxWidth="1.7976931348623157E308" spacing="8.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnUp" mnemonicParsing="false" onAction="#handleUpClicked" prefWidth="80.0" text="W górę" />
+            <TextField fx:id="txtPath" maxWidth="1.7976931348623157E308" prefWidth="692.0" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>
